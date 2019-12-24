@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Prata&display=swap');
+
 :root {
-    --bg-clr: #222;
-    --dark-bg: #121212;
-    --theme-clr: purple;
-    --text-clr: #bbb;
-    --light-text: #eee;
+    --bg-clr: #ddd;
+    --dark-bg: #eee;
+    --theme-clr: royalblue;
+    --text-clr: #333;
+    --light-text: #222;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
 }
 
 h1, h2, h3 {
+    font-family: 'Prata';
     margin-top: 0;
     margin-bottom: 2em;
 }
@@ -28,6 +31,7 @@ h2, section h3 {
 }
 
 p {
+    font-family: 'Lato';
     margin-top: 0;
 }
 
@@ -37,7 +41,7 @@ p {
     z-index: 3;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .6);
     animation: fade-in 9s ease-in-out 1s;
     display: block;
     opacity: 0;
@@ -46,11 +50,11 @@ p {
 
 .frame {
     position: relative;
-    margin: 15vh auto;
+    margin: 25vh auto;
     background: linear-gradient(to right, #111, #222);
-    width: 70%;
-    height: 70%;
-    border: solid 10px #fff;
+    width: 80%;
+    height: 40%;
+    border: solid 3px #fff;
     overflow: hidden;
 }
     .frame .information {
@@ -60,24 +64,30 @@ p {
         left: 0;
         right: 0;
         padding: 3%;
-        background: linear-gradient(150deg, #111 5%, transparent);
+        background: linear-gradient(150deg, #111 3%, transparent);
         z-index: 1111;
         color: #000;
     }
         .frame .information p {
-            color: #fff;
-            font-size: 2rem;
             margin: 0;
         }
+
+        .frame .information p.info {
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.25rem;
+        }
         .frame .information p.more {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #ddd;
         }
 
 #splash-video {
+    position: absolute;
+    bottom: 0; left: 0;
     margin-top: 5%;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 @keyframes fade-in {
@@ -141,6 +151,31 @@ img {
         margin: 2em 0 1em;
     }
 
+    .frame {
+        position: relative;
+        margin: 15vh auto;
+        background: linear-gradient(to right, #111, #222);
+        width: 70%;
+        height: 70%;
+        border: solid 10px #fff;
+        overflow: hidden;
+    }
+
+    .frame .information p.info {
+        font-weight: bold;
+        color: #fff;
+        font-size: 1.75rem;
+    }
+    .frame .information p.more {
+        font-size: 1.25rem;
+        color: #ddd;
+    }
+
+    #splash-video {
+        width: 100%;
+        height: auto;
+    }
+
     .outer {
         padding: 4em;
     }
@@ -199,4 +234,5 @@ img {
     section {
         column-count: 3;
     }
+    
 }
